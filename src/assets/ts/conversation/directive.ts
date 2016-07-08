@@ -187,7 +187,7 @@ conversationDire.directive('contenteditableDire', function() {
             webimutil.Helper.browser.msie ? element.bind("keyup paste", read) : element.bind("input", read);
 
             function read() {
-                var html = element.html();
+                var html = element.text();
                 html = html.replace(/^<br>$/i, "");
                 html = html.replace(/<br>/gi, "\n");
                 html = replacemy(html);
